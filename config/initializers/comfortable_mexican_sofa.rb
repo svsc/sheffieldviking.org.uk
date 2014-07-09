@@ -91,13 +91,13 @@ end
 
 # Default credentials for ComfortableMexicanSofa::HttpAuth
 # YOU REALLY WANT TO CHANGE THIS BEFORE PUTTING YOUR SITE LIVE
-ComfortableMexicanSofa::HttpAuth.username = 'username'
-ComfortableMexicanSofa::HttpAuth.password = 'password'
+# ComfortableMexicanSofa::HttpAuth.username = 'username'
+# ComfortableMexicanSofa::HttpAuth.password = 'password'
 
 # You can use bcrypt (gem 'bcrypt-ruby') if you want to:
-#   require 'bcrypt'
-#   ComfortableMexicanSofa::HttpAuth.username = 'username'
-#   ComfortableMexicanSofa::HttpAuth.password = BCrypt::Password.new '... bcrypt hash ...'
+  require 'bcrypt'
+  ComfortableMexicanSofa::HttpAuth.username = 'cowlibob'
+  ComfortableMexicanSofa::HttpAuth.password = BCrypt::Password.new '$2a$10$x5TrFuCL1xip24wBKlOWvO/DJxAHHXlUVh/VSNuPkq5AQhP7p5wdm'
 #
 # To create a bcrypt hash:
 #   BCrypt::Password.create('password').to_s
