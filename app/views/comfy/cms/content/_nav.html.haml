@@ -1,0 +1,8 @@
+%ul.nav.nav-pills.nav-stacked
+  %li
+    = link_to @cms_site.pages.root.label, @cms_site.pages.root.full_path
+  - @cms_site.pages.root.children.published.each do |page|
+    %li
+      = link_to page.label, page.full_path
+  %li
+    = link_to 'Results', 'http://results.sheffieldviking.org.uk'
