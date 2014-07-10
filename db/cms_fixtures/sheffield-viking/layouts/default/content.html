@@ -1,14 +1,24 @@
 <html>
   <body>
-    <div class="container">
-      <div id="content" class="col-md-8 col-md-push-4">
-        <h1>{{ cms:page:header:string }}</h1>
-        {{ cms:page:content:rich_text }}
+    <div class="container-fluid">
+      <div class="row">
+        <div class="dropdown">
+          <button type="button" class="btn btn-primary btn-lg visible-xs pull-left" data-toggle="dropdown">Menu</button>
+          <div class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            {{ cms:partial:nav }}
+          </div>
+        </div>
       </div>
-      <div id="nav" class="col-md-4 col-md-pull-8">
-        <h1>
-          </h1>
-        </h1>{{ cms:partial:nav }}
+      <div class="row">
+        <div id="content" class="col-sm-10 col-md-10 col-sm-push-2 col-md-push-2">
+          <h1>{{ cms:page:header:string }}</h1>
+          {{ cms:page:content:rich_text }}
+        </div>
+        <div id="nav" class="col-sm-2 col-md-2 col-sm-pull-10 col-md-pull-10 hidden-xs">
+          <h1></h1>
+          {{ cms:partial:nav }}
+        </div>
+        
       </div>
     </div>
   </body>
