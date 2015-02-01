@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   comfy_route :cms_admin, :path => '/admin'
 
+  get 'renew', to: redirect('http://membership.herokuapp.com')
+
   # Make sure this routeset is defined last
   comfy_route :cms, :path => '/', :sitemap => false
 
